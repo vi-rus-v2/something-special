@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal Example</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <style>
+    body{
+      height: 100vh !important;
+    }
+  </style>
+  <script>
+    emailjs.init('RaZiETNjKP9I7SObp');
+  </script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div>
+      <h1 class="header_text">Yeeyy! Finally</h1>
+    </div>
+    <div class="gif_container">
+      <img src="https://i.postimg.cc/wTDG30TB/yes.gif" alt="Cute animated illustration">
+    </div>
+    <button class="btn" id="yesButton" onclick="openModal()">Let's Fix a Date</button>
+  </div>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Select a Date and Time</h2>
+      <input type="datetime-local" id="datetimepicker">
+
+      <button class="unknown-btn"></button>
+      <button class="modal-btn" onclick="sendEmail()">Confirm</button>
+    </div>
+  </div>
+
+ <script src="./script.js"></script>
+
+</body>
+
+</html>
